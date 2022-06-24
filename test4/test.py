@@ -62,8 +62,8 @@ class Generator():
             targets,
             func,
             returns,
-            args
-            USE_BLAS=True
+            args,
+            USE_BLAS=True,
             BLAS_FUNC=None
             ):
         self.targets=targes
@@ -84,14 +84,17 @@ class Generator():
 #             print(arg_names)
 #             self.parse_func_def(ret=ret, target=target, func=func, arg_types=arg_types, arg_names=arg_names)
 
-def setup_dir()
-def generate()
+def setup_dir():
+    pass
+def generate():
+    pass
+
 obj_dir="obj/"
 setup_dir(objdir)
  
 generate(
         func = "axpy",
-        targets = [("double", "void"), ("float", "void"), ("int32_t", "void"), ("int64_t", "void")]
+        targets = [("double", "void"), ("float", "void"), ("int32_t", "void"), ("int64_t", "void")],
         args = [("const {type}", "{{vector_name[0]}}"), "const {T}Vec", "{T}Vec"],
         USE_BLAS = [True, "cblas_axpy"],
         USE_BLAS = [False],
